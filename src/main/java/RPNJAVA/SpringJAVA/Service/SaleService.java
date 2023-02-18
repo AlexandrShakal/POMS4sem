@@ -23,7 +23,7 @@ public class SaleService {
     }
 
     public List<Sale> findAllByBuyer(int id){
-        return SaleRepository.findSalesByBuyer_id(id);
+        return SaleRepository.findSalesByBuyerId(id);
     }
 
     public Sale saveSale(Sale sale){

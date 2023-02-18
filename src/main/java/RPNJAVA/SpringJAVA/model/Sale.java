@@ -12,14 +12,14 @@ public class Sale {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "Part_id")
-    private long Part_id;
+    @Column(name = "partId")
+    private long partId;
 
     @Column(name = "count")
     private long count;
 
-    @Column(name = "buyer_id")
-    private long Buyer_id;
+    @Column(name = "buyerId")
+    private long buyerId;
 
 
 }

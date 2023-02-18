@@ -9,16 +9,16 @@
 <h2>Sale create</h2>
 <form action="#" th:action="@{/sale-create}" th:object="${sale}" method="post">
 
-    <label for="Part_id">Part id</label>
-    <input type="text" th:field="*{Part_id}" id="Part_id" placeholder="Part id">
+    <label for="partId">Part id</label>
+    <input type="text" th:field="*{partId}" id="partId" placeholder="partId id">
 
 
     <label for="count">Count</label>
     <input type="number"  th:field="*{count}" id="count" placeholder="Count">
 
 
-    <label for="Buyer_id">Buyer id</label>
-    <input type="text" th:field="*{Buyer_id}" id="Buyer_id" placeholder="Buyer id">
+    <label for="buyerId">buyerId</label>
+    <input type="text" th:field="*{buyerId}" id="buyerId" placeholder="buyerId">
 
     <input type="submit" value ="Create Sale">
 

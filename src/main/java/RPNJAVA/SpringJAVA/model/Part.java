@@ -19,9 +19,9 @@ public class Part {
     @Column(name = "count")
     private long count;
 
-    @Column(name = "Category_name")
-    private String Category_name;
+    @Column(name = "categoryName")
+    private String categoryName;
 
-    @Column(name = "Manufacturer_name")
-    private String Manufacturer_name;
+    @Column(name = "manufacturerName")
+    private String manufacturerName;
 }

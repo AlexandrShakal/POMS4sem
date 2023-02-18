@@ -1,9 +1,7 @@
 package RPNJAVA.SpringJAVA.controller;
 
 
-import RPNJAVA.SpringJAVA.Service.BuyerService;
 import RPNJAVA.SpringJAVA.Service.SaleService;
-import RPNJAVA.SpringJAVA.model.Buyer;
 import RPNJAVA.SpringJAVA.model.Sale;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,8 +29,10 @@ public class SaleController {
 
 
     @GetMapping("/sale-buyer/{id}")
-    public List<Sale> findAllByBuyer(@PathVariable ("id") int id){
-        return saleService.findAllByBuyer(id);
+    public String findAllByBuyer(@PathVariable ("id") int id, Model model){
+        List<Sale> sales = saleService.findAllByBuyer(id);
+        model.addAttribute("sales",sales);
+        return "buyer-statistic";
 
     }
 
