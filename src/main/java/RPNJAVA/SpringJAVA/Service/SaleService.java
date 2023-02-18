@@ -2,8 +2,6 @@ package RPNJAVA.SpringJAVA.Service;
 
 
 import RPNJAVA.SpringJAVA.model.Sale;
-import RPNJAVA.SpringJAVA.model.User;
-import RPNJAVA.SpringJAVA.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +20,10 @@ public class SaleService {
 
     public List<Sale> findAll(){
         return SaleRepository.findAll();
+    }
+
+    public List<Sale> findAllByBuyer(int id){
+        return SaleRepository.findSalesByBuyer_id(id);
     }
 
     public Sale saveSale(Sale sale){

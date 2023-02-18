@@ -2,6 +2,7 @@ package RPNJAVA.SpringJAVA.controller;
 
 import RPNJAVA.SpringJAVA.Service.BuyerService;
 import RPNJAVA.SpringJAVA.model.Buyer;
+import RPNJAVA.SpringJAVA.model.Sale;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,4 +23,5 @@ public class BuyerController {
         model.addAttribute("buyer", Buyer);
         return "buyer-list";
     }
+
 }

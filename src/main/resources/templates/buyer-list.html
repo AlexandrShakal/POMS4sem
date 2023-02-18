@@ -33,6 +33,11 @@
         <td th:text="${buyer.id}"></td>
         <td th:text="${buyer.name}"></td>
         <td th:text="${buyer.email}"></td>
+
+
+        <td><a th:href="@{buyer-statistic/{id}(id=${buyer.id})}">Edit</a></td>
+
+
       </tr>
       </tbody>
     </table>

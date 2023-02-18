@@ -27,6 +27,18 @@ public class SaleController {
         return "Sale-list";
     }
 
+
+
+
+    @GetMapping("/sale-buyer/{id}")
+    public List<Sale> findAllByBuyer(@PathVariable ("id") int id){
+        return saleService.findAllByBuyer(id);
+
+    }
+
+
+
+
     @GetMapping("/sale-create")
     public String createSaleForm(Sale sale){
         return "sale-create";
