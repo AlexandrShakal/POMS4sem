@@ -14,25 +14,26 @@
 </head>
 <body>
 
-<div th:switch="${buyer}">
+<div th:switch="${sales}">
 
-    <h2 th:case="null">No users found!</h2>
+    <h2 th:case="null">No sales found!</h2>
     <div th:case="*">
         <h2>Statistic</h2>
         <table>
             <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Email</th>
+                <td th:text="${sale.id}"></td>
+                <td th:text="${sale.Part_id}"></td>
+                <td th:text="${sale.count}"></td>
+                <td th:text="${sale.Buyer_id}"></td>
             </tr>
             </thead>
 
             <tbody>
-            <tr th:each="buyer : ${buyer}">
-                <td th:text="${buyer.id}"></td>
-                <td th:text="${buyer.name}"></td>
-                <td th:text="${buyer.email}"></td>
+            <tr th:each="sale : ${sale}">
+                <td th:text="${sale.id}"></td>
+                <td th:text="${sale.name}"></td>
+                <td th:text="${sale.email}"></td>
 
 
 
